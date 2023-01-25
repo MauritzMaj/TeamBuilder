@@ -20,3 +20,8 @@ div{
     height:300px;
     border: solid black 1px;
 }
+
+cardheader {
+
+    text-align: center;
+}

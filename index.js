@@ -126,7 +126,7 @@ async function init() {
     var userResponses = await inquirer.prompt(mainQuestions);
     console.log(userResponses);
     console.log (position);
-    if (position == "Manager") {
+    if (position.position == "Manager") {
       var managerResponses = await inquirer.prompt(managerQ);
       console.log(Object.values(userResponses));
       let manager = new Manager(
@@ -134,7 +134,7 @@ async function init() {
         ...Object.values(managerResponses)
       );
       employees.push(manager);
-    } else if (position == 'Intern') {
+    } else if (position.position == 'Intern') {
       var internResponses = await inquirer.prompt(internQ);
       let intern = new Intern(
         position,
@@ -177,7 +177,7 @@ function createCard(employees){
     <ul>
     <li> Position: ${employees[i].position}</li>
     <li> email: <a href = ${employees[i].email}>${employees[i].email}</a></li>
-    <li> Github: <a href = ${employees[i].github}>Github.com/${employees[i].github}</a> <li>
+    <li> Github: <a href = ${employees[i].github}>Github.com/${employees[i].github}</a></li>
     <li> Employee ID: ${employees[i].id}</li>
     </ul>
 </div>`
