@@ -122,7 +122,7 @@ const writeFile = util.promisify(writeToFile);
 
 async function init() {
   try {
-    var position = inquirer.prompt(choosePosition);
+    var position = await inquirer.prompt(choosePosition);
     var userResponses = await inquirer.prompt(mainQuestions);
     console.log(userResponses);
     console.log (position);
