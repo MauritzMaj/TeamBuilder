@@ -1,24 +1,38 @@
-const Intern = require('../lib/intern');
+const Intern = require("../lib/intern");
 
-describe('init', () => {
-  describe('Initialization', () => {
-
-    // positive test description
-    it("should create an object with a properties equal to what is inputed", () => {
-      
-      const position = 'intern';
-      const github = 'github';
-      const id = 'id';
-      const name = 'name';
-      const email = 'email';
-      const school = 'school'
-      const testIntern = [position,name,id,email,github,school]
-    
-      const obj = new Intern(name,id,email,github,school);
-
-      //desired outcome
-      expect(Object.values(obj)).toEqual(testIntern);
-    });
-
-  });
+test('name', () => {
+    const name = "Mark" 
+    const e = new Intern(name)
+    expect(e.name).toBe(name)
 });
+
+test('id', () => {
+    const id = 1;
+    const e = new Intern("Mark", id)
+    expect(e.id).toBe(id)
+});
+
+test('email', () => {
+    const email = "Mark@noemail.com";
+    const e = new Intern("Mark", 1, email)
+    expect(e.email).toBe(email)
+});
+
+test('github',() => {
+  const user = 'MauritzMaj'
+  const e = new Engineer('Mark', 1, 'Dan@noemail.com', user)
+  expect(e.github).toBe(user);
+});
+
+ test('getRole()', () =>{
+     const role = 'Intern'
+     const e = new Intern('Mark', 1, 'Mark@noemail.com', 'Intern')
+     expect(e.getRole()).toBe(role)
+ });
+
+ test('getSchool()', () =>{
+     const schoolName = 'NYU'
+     const e = new Intern('Mark', 1, 'Mark@noemail.com', schoolName)
+     expect(e.getSchool()).toBe(schoolName)
+ });
+

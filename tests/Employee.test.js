@@ -1,43 +1,59 @@
-const Employee = require('../lib/Employee');
+const Employee = require("../lib/employee");
 
-test('createsemployee object', () => {
-    const employee = new Employee();
-    expect(typeof(employee)).toBe("object");
+test('Employee', () => {
+    const e = new Employee()
+    expect(typeof(e)).toBe('object')
 });
 
-test('Set Employee Name', () => {
-    const name = "Grant"
-    const employee = new Employee(name);
-    expect(employee.name).toBe(name);
-    // expect(employee.id).toBe(name);
+test('name', () => {
+    const name = "Dan" 
+    const e = new Employee(name)
+    expect(e.name).toBe(name)
 });
-test('Set ID', () => {
-    const testId = 100;
-    const employee = new Employee("Grant", testId);
-    expect(employee.id).toBe(testId);
+
+test('id', () => {
+    const id = 1;
+    const e = new Employee("Dan", id)
+    expect(e.id).toBe(id)
 });
-test('Set Email', () => {
-    const testEmail = "grant@cheese.com"
-    const employee = new Employee("Grant", 1, testEmail);
-    expect(employee.email).toBe(testEmail);
+
+test('email', () => {
+    const email = "Dan@noemail.com";
+    const e = new Employee("Dan", 1, email)
+    expect(e.email).toBe(email)
 });
-test('get name from getName', () => {
-    const testName = "Grant"
-    const employee = new Employee(testName);
-    expect(employee.getName()).toBe(testName);
+
+test('github',() => {
+    const user = 'MauritzMaj'
+    const e = new Engineer('Dan', 1, 'Dan@noemail.com', user)
+    expect(e.github).toBe(user);
+ });
+
+test('getName()', () => {
+  const name = "Dan" 
+  const e = new Employee(name)
+  expect(e.getName()).toBe(name)
 });
-test('get ID from getId', () => {
-    const testId = "100"
-    const employee = new Employee("Grant", testId);
-    expect(employee.getId()).toBe(testId);
+
+test('getId()', () => {
+  const id = 1;
+  const e = new Employee("Dan", id)
+  expect(e.getId()).toBe(id)
 });
-test('get email from getEmail', () => {
-    const testEmail = "grant@cheese.com"
-    const employee = new Employee("Grant", 1, testEmail);
-    expect(employee.getEmail()).toBe(testEmail);
+
+test('getEmail()', () => {
+  const email = "Dan@noemail.com";
+  const e = new Employee("Dan", 1, email)
+  expect(e.getEmail()).toBe(email)
 });
-test('getRole function', () => {
-    const testRole = "Employee"
-    const employee = new Employee("Grant", 1, "grant@cheese.com");
-    expect(employee.getRole()).toBe(testRole);
+
+test('getGitHub()', () =>{
+    const gitHub = 'www.github.com/MauritzMaj'
+    const e = new Engineer('Dan', 1, 'Dan@noemail.com', gitHub)
+    expect(e.getGitHub()).toBe(gitHub);
+});
+
+test('getRole()', () => {
+  const e = new Employee("Employee")
+  expect(e.getRole()).toBe("Employee")
 });

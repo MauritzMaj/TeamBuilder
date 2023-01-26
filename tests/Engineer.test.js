@@ -1,23 +1,31 @@
-const Engineer = require('../lib/engineer');
+const Engineer = require("../lib/Engineer");
 
-describe('init', () => {
-  describe('Initialization', () => {
-
-    // positive test description
-    it("should create an object with a properties equal to what is inputed", () => {
-      
-      const position = 'Engineer';
-      const github = 'github';
-      const id = 'id';
-      const name = 'name';
-      const email = 'email';
-      const testEngineer = [position,name,id,email,github]
-    
-      const obj = new Engineer (name,id,email,github);
-
-      //desired outcome
-      expect(Object.values(obj)).toEqual(testEngineer);
-    });
-
-  });
+test('name', () => {
+    const name = "Frank" 
+    const e = new Engineer(name)
+    expect(e.name).toBe(name)
 });
+
+test('id', () => {
+    const id = 1;
+    const e = new Engineer("Frank", id)
+    expect(e.id).toBe(id)
+});
+
+test('email', () => {
+    const email = "Frank@noemail.com";
+    const e = new Engineer("Frank", 1, email)
+    expect(e.email).toBe(email)
+});
+
+ test('github',() => {
+    const user = 'MauritzMaj'
+    const e = new Engineer('Frank', 1, 'Frank@noemail.com', user)
+    expect(e.github).toBe(user);
+ });
+
+ test('getRole()', () =>{
+     const role = 'Engineer'
+     const e = new Engineer('Frank', 1, 'Frank@noemail.com', 'Engineer')
+     expect(e.getRole()).toBe(role);
+ });
