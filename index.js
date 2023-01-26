@@ -130,6 +130,7 @@ async function init() {
       var managerResponses = await inquirer.prompt(managerQ);
       console.log(Object.values(userResponses));
       let manager = new Manager(
+        position,
         ...Object.values(userResponses),
         ...Object.values(managerResponses)
       );
