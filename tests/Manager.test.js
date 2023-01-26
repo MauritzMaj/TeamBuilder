@@ -25,9 +25,9 @@ test('github',() => {
 });
 
 test('officeNumber', () => {
-    const officeNumber = 30;
-    const e = new Manager('Manager', 'John', 1, 'John@noemail.com', "MauritzMaj", officeNumber)
-    expect(e.officeNumber).toBe(officeNumber);
+    const office = 30;
+    const e = new Manager('Manager', 'John', 1, 'John@noemail.com', "MauritzMaj", office)
+    expect(e.office).toBe(office);
 });
 
 test('getRole()', () =>{
