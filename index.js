@@ -175,7 +175,7 @@ function createCard(employees){
     </cardheader>
 
     <ul>
-    <li> Position: ${employees[i].position}</li>
+    <li> Position: ${employees[i].position.position}</li>
     <li> email: <a href = ${employees[i].email}>${employees[i].email}</a></li>
     <li> Github: <a href = ${employees[i].github}>Github.com/${employees[i].github}</a></li>
     <li> Employee ID: ${employees[i].id}</li>
