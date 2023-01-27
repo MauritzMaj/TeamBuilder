@@ -38,7 +38,7 @@ Created by user: MauritzMaj
 
 https://github.com/MauritzMaj/TeamBuilder
 
-link to video tutorial:
+link to video tutorial:https://drive.google.com/file/d/1MJ7FB81doHKw0MqnDAAH6MfafcssLM45/view
 screenshot of application:
 
 
