@@ -41,4 +41,6 @@ https://github.com/MauritzMaj/TeamBuilder
 link to video tutorial:https://drive.google.com/file/d/1MJ7FB81doHKw0MqnDAAH6MfafcssLM45/view
 screenshot of application:
 
+<img width="946" alt="image" src="https://user-images.githubusercontent.com/105758175/214978145-181607e8-3626-4ead-8092-0ce1ad6c2d36.png">
+
 
